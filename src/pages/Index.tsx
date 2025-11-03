@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageSquare, Settings, TrendingUp, Bell, Zap, Lock, BarChart, Brain, Database, FileSpreadsheet } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.jpg";
+import Header from "@/components/Header";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import WhatsAppIntegration from "@/components/WhatsAppIntegration";
+import DeviceMockup from "@/components/DeviceMockup";
 
 const Index = () => {
   const scrollToCTA = () => {
@@ -10,8 +15,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative gradient-hero min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative gradient-hero min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 py-20 relative z-10">
@@ -46,7 +53,7 @@ const Index = () => {
       </section>
 
       {/* Como Funciona */}
-      <section className="py-24 bg-background">
+      <section id="how-it-works-section" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Converse, e a IA faz o resto.
@@ -80,8 +87,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Integração WhatsApp */}
+      <WhatsAppIntegration />
+
       {/* Tecnologia */}
-      <section className="py-24 bg-card/50">
+      <section id="features-section" className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Tecnologia de ponta, sem complicação.
@@ -158,8 +168,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Device Mockup */}
+      <DeviceMockup />
+
       {/* Planos */}
-      <section className="py-24 bg-card/50">
+      <section id="plans-section" className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Comece grátis e desbloqueie o Pro quando quiser.
@@ -238,6 +251,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testemunhos */}
+      <Testimonials />
+
+      {/* FAQ */}
+      <FAQ />
 
       {/* Sobre */}
       <section className="py-24 bg-background">
