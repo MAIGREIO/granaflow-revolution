@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageSquare, Settings, TrendingUp, Bell, Zap, Lock, BarChart, Brain, Database, FileSpreadsheet } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MessageSquare, Settings, TrendingUp, Bell, Zap, Lock, BarChart, Brain, Database, FileSpreadsheet, Check } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.jpg";
 import Header from "@/components/Header";
 import Testimonials from "@/components/Testimonials";
@@ -175,80 +176,177 @@ const Index = () => {
       <section id="plans-section" className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            Comece grátis e desbloqueie o Pro quando quiser.
+            Comece a organizar suas finanças
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="glass-card p-8 hover:border-primary transition-all duration-300">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Gratuito</h3>
-                  <p className="text-4xl font-bold text-primary">0€</p>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
-                    <span>Controle básico de gastos</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
-                    <span>Saldo automático</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                    </div>
-                    <span>Via WhatsApp</span>
-                  </li>
-                </ul>
-                <Button variant="glass" className="w-full" onClick={scrollToCTA}>
-                  Começar Grátis
-                </Button>
-              </div>
-            </Card>
+          <Tabs defaultValue="monthly" className="max-w-6xl mx-auto">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
+              <TabsTrigger value="monthly" className="text-lg">Mensal</TabsTrigger>
+              <TabsTrigger value="annual" className="text-lg">Anual</TabsTrigger>
+            </TabsList>
 
-            <Card className="glass-card p-8 border-primary glow-cyan hover:glow-cyan-strong transition-all duration-300 transform hover:scale-105">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Pro</h3>
-                  <p className="text-4xl font-bold text-primary">4,99€<span className="text-base text-muted-foreground">/mês</span></p>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-background" />
+            {/* Planos Mensais */}
+            <TabsContent value="monthly" className="mt-0">
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="glass-card p-8 hover:border-primary transition-all duration-300">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Premium</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-primary">5,99€</p>
+                        <span className="text-muted-foreground">/mês</span>
+                      </div>
+                      <p className="text-sm text-primary mt-2">✨ 3 dias grátis ✨</p>
                     </div>
-                    <span>IA avançada</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-background" />
+                    <div className="space-y-3">
+                      <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
+                      <ul className="space-y-3">
+                        {[
+                          "Sistema web com gráficos interativos",
+                          "Controle via WhatsApp (texto, áudio, imagem)",
+                          "Transações ilimitadas",
+                          "Categorias personalizadas",
+                          "Suporte via WhatsApp",
+                          "Até 3 contas bancárias",
+                          "Lembretes automáticos",
+                          "Exportação de dados"
+                        ].map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <span>Alertas personalizados</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-background" />
+                    <Button variant="glass" className="w-full" onClick={scrollToCTA}>
+                      Seja Premium
+                    </Button>
+                  </div>
+                </Card>
+
+                <Card className="glass-card p-8 border-primary glow-cyan hover:glow-cyan-strong transition-all duration-300 transform hover:scale-105">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Full Control</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-primary">9,99€</p>
+                        <span className="text-muted-foreground">/mês</span>
+                      </div>
+                      <p className="text-sm text-primary mt-2">✨ 3 dias grátis ✨</p>
                     </div>
-                    <span>Relatórios detalhados</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-background" />
+                    <div className="space-y-3">
+                      <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
+                      <ul className="space-y-3">
+                        {[
+                          "Todos os recursos Premium",
+                          "Contas bancárias ilimitadas",
+                          "Gestão Compartilhada (famílias, casais)",
+                          "WhatsApp individual para cada membro",
+                          "Alertas personalizados por membro",
+                          "Visualização centralizada",
+                          "1 Usuário incluso sem custo",
+                          "Suporte humanizado",
+                          "Suporte por ligação"
+                        ].map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <span>Suporte prioritário</span>
-                  </li>
-                </ul>
-                <Button variant="hero" className="w-full" onClick={scrollToCTA}>
-                  Quero fazer parte da revolução
-                </Button>
+                    <Button variant="hero" className="w-full" onClick={scrollToCTA}>
+                      Assuma o controle
+                    </Button>
+                  </div>
+                </Card>
               </div>
-            </Card>
-          </div>
+            </TabsContent>
+
+            {/* Planos Anuais */}
+            <TabsContent value="annual" className="mt-0">
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="glass-card p-8 hover:border-primary transition-all duration-300">
+                  <div className="space-y-6">
+                    <div>
+                      <div className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                        10% de desconto
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">Premium</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-primary">57,50€</p>
+                        <span className="text-muted-foreground">/ano</span>
+                      </div>
+                      <p className="text-sm text-primary mt-2">✨ 3 dias grátis ✨</p>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
+                      <ul className="space-y-3">
+                        {[
+                          "Sistema web com gráficos interativos",
+                          "Controle via WhatsApp (texto, áudio, imagem)",
+                          "Transações ilimitadas",
+                          "Categorias personalizadas",
+                          "Suporte via WhatsApp",
+                          "Até 3 contas bancárias",
+                          "Lembretes automáticos",
+                          "Exportação de dados"
+                        ].map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <Button variant="glass" className="w-full" onClick={scrollToCTA}>
+                      Seja Premium
+                    </Button>
+                  </div>
+                </Card>
+
+                <Card className="glass-card p-8 border-primary glow-cyan hover:glow-cyan-strong transition-all duration-300 transform hover:scale-105">
+                  <div className="space-y-6">
+                    <div>
+                      <div className="inline-block bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                        20% de desconto
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2">Full Control</h3>
+                      <div className="flex items-baseline gap-2">
+                        <p className="text-4xl font-bold text-primary">94,08€</p>
+                        <span className="text-muted-foreground">/ano</span>
+                      </div>
+                      <p className="text-sm text-primary mt-2">✨ 3 dias grátis ✨</p>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
+                      <ul className="space-y-3">
+                        {[
+                          "Todos os recursos Premium",
+                          "Contas bancárias ilimitadas",
+                          "Gestão Compartilhada (famílias, casais)",
+                          "WhatsApp individual para cada membro",
+                          "Alertas personalizados por membro",
+                          "Visualização centralizada",
+                          "1 Usuário incluso sem custo",
+                          "Suporte humanizado",
+                          "Suporte por ligação"
+                        ].map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <Button variant="hero" className="w-full" onClick={scrollToCTA}>
+                      Assuma o controle
+                    </Button>
+                  </div>
+                </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
