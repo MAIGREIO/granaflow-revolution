@@ -35,9 +35,11 @@ const Index = () => {
                 variant="hero" 
                 size="lg" 
                 className="text-lg px-8 py-6 animate-glow-pulse"
-                onClick={scrollToCTA}
+                asChild
               >
-                Começar no WhatsApp
+                <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
+                  Começar no WhatsApp
+                </a>
               </Button>
             </div>
             
@@ -384,7 +386,7 @@ const Index = () => {
             className="text-xl px-12 py-8 bg-background text-foreground hover:bg-background/90 animate-glow-pulse font-bold"
             asChild
           >
-            <a href="https://wa.me/message" target="_blank" rel="noopener noreferrer">
+            <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
               Começar no WhatsApp
             </a>
           </Button>
