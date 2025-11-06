@@ -220,8 +220,10 @@ const Index = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="glass" className="w-full" onClick={scrollToCTA}>
-                      Seja Premium
+                    <Button variant="glass" className="w-full" asChild>
+                      <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
+                        Seja Premium
+                      </a>
                     </Button>
                   </div>
                 </Card>
@@ -257,8 +259,10 @@ const Index = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="hero" className="w-full" onClick={scrollToCTA}>
-                      Assuma o controle
+                    <Button variant="hero" className="w-full" asChild>
+                      <a href="https://buy.stripe.com/test_3cI8wR8e90Cl0oJb302ZO01" target="_blank" rel="noopener noreferrer">
+                        Assuma o controle
+                      </a>
                     </Button>
                   </div>
                 </Card>
@@ -301,8 +305,10 @@ const Index = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="glass" className="w-full" onClick={scrollToCTA}>
-                      Seja Premium
+                    <Button variant="glass" className="w-full" asChild>
+                      <a href="https://buy.stripe.com/test_fZubJ3gKF4SB4EZ6MK2ZO03" target="_blank" rel="noopener noreferrer">
+                        Seja Premium
+                      </a>
                     </Button>
                   </div>
                 </Card>
@@ -341,8 +347,10 @@ const Index = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="hero" className="w-full" onClick={scrollToCTA}>
-                      Assuma o controle
+                    <Button variant="hero" className="w-full" asChild>
+                      <a href="https://buy.stripe.com/test_dRm9AVgKF0Cl4EZ0om2ZO02" target="_blank" rel="noopener noreferrer">
+                        Assuma o controle
+                      </a>
                     </Button>
                   </div>
                 </Card>
