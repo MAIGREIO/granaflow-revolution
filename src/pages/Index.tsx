@@ -8,14 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import WhatsAppIntegration from "@/components/WhatsAppIntegration";
 import DeviceMockup from "@/components/DeviceMockup";
-
 const Index = () => {
   const scrollToCTA = () => {
-    document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('cta-section')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
@@ -25,18 +24,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-5xl leading-tight md:text-8xl font-bold">
                 A Revolução da Organização Financeira
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
                 Controle seu dinheiro sem planilhas — direto no WhatsApp, com IA.
               </p>
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="text-lg px-8 py-6 animate-glow-pulse"
-                asChild
-              >
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6 animate-glow-pulse" asChild>
                 <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
                   Começar no WhatsApp
                 </a>
@@ -45,11 +39,7 @@ const Index = () => {
             
             <div className="relative animate-float">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-              <img 
-                src={heroPhone} 
-                alt="GranaFlow WhatsApp interface" 
-                className="relative z-10 w-full max-w-md mx-auto rounded-3xl shadow-2xl"
-              />
+              <img src={heroPhone} alt="GranaFlow WhatsApp interface" className="relative z-10 w-full max-w-md mx-auto rounded-3xl shadow-2xl" />
             </div>
           </div>
         </div>
@@ -203,27 +193,40 @@ const Index = () => {
                     <div className="space-y-3">
                       <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
                       <ul className="space-y-3">
-                        {[
-                          { text: "Sistema web com gráficos e relatórios financeiros", checked: true },
-                          { text: "Controle de gastos e ganhos direto pelo WhatsApp", checked: true },
-                          { text: "Transações ilimitadas por texto, áudio e imagem", checked: true },
-                          { text: "Criação de categorias e subcategorias personalizadas", checked: true },
-                          { text: "Lembretes automáticos de contas a pagar e receber", checked: true },
-                          { text: "Até 3 contas bancárias conectadas", checked: true },
-                          { text: "Suporte via WhatsApp", checked: true },
-                          { text: "Gestão compartilhada", checked: false },
-                          { text: "Exportação de dados", checked: false },
-                          { text: "Suporte por ligação", checked: false }
-                        ].map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            {feature.checked ? (
-                              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                            ) : (
-                              <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                            )}
+                        {[{
+                        text: "Sistema web com gráficos e relatórios financeiros",
+                        checked: true
+                      }, {
+                        text: "Controle de gastos e ganhos direto pelo WhatsApp",
+                        checked: true
+                      }, {
+                        text: "Transações ilimitadas por texto, áudio e imagem",
+                        checked: true
+                      }, {
+                        text: "Criação de categorias e subcategorias personalizadas",
+                        checked: true
+                      }, {
+                        text: "Lembretes automáticos de contas a pagar e receber",
+                        checked: true
+                      }, {
+                        text: "Até 3 contas bancárias conectadas",
+                        checked: true
+                      }, {
+                        text: "Suporte via WhatsApp",
+                        checked: true
+                      }, {
+                        text: "Gestão compartilhada",
+                        checked: false
+                      }, {
+                        text: "Exportação de dados",
+                        checked: false
+                      }, {
+                        text: "Suporte por ligação",
+                        checked: false
+                      }].map((feature, index) => <li key={index} className="flex items-start gap-2">
+                            {feature.checked ? <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> : <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />}
                             <span className="text-sm">{feature.text}</span>
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                     </div>
                     <Button variant="glass" className="w-full" asChild>
@@ -310,27 +313,40 @@ const Index = () => {
                     <div className="space-y-3">
                       <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
                       <ul className="space-y-3">
-                        {[
-                          { text: "Sistema web com gráficos e relatórios financeiros", checked: true },
-                          { text: "Controle de gastos e ganhos direto pelo WhatsApp", checked: true },
-                          { text: "Transações ilimitadas por texto, áudio e imagem", checked: true },
-                          { text: "Criação de categorias e subcategorias personalizadas", checked: true },
-                          { text: "Lembretes automáticos de contas a pagar e receber", checked: true },
-                          { text: "Até 3 contas bancárias conectadas", checked: true },
-                          { text: "Suporte via WhatsApp", checked: true },
-                          { text: "Gestão compartilhada", checked: false },
-                          { text: "Exportação de dados", checked: false },
-                          { text: "Suporte por ligação", checked: false }
-                        ].map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            {feature.checked ? (
-                              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                            ) : (
-                              <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                            )}
+                        {[{
+                        text: "Sistema web com gráficos e relatórios financeiros",
+                        checked: true
+                      }, {
+                        text: "Controle de gastos e ganhos direto pelo WhatsApp",
+                        checked: true
+                      }, {
+                        text: "Transações ilimitadas por texto, áudio e imagem",
+                        checked: true
+                      }, {
+                        text: "Criação de categorias e subcategorias personalizadas",
+                        checked: true
+                      }, {
+                        text: "Lembretes automáticos de contas a pagar e receber",
+                        checked: true
+                      }, {
+                        text: "Até 3 contas bancárias conectadas",
+                        checked: true
+                      }, {
+                        text: "Suporte via WhatsApp",
+                        checked: true
+                      }, {
+                        text: "Gestão compartilhada",
+                        checked: false
+                      }, {
+                        text: "Exportação de dados",
+                        checked: false
+                      }, {
+                        text: "Suporte por ligação",
+                        checked: false
+                      }].map((feature, index) => <li key={index} className="flex items-start gap-2">
+                            {feature.checked ? <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" /> : <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />}
                             <span className="text-sm">{feature.text}</span>
-                          </li>
-                        ))}
+                          </li>)}
                       </ul>
                     </div>
                     <Button variant="glass" className="w-full" asChild>
@@ -432,20 +448,13 @@ const Index = () => {
           <h2 className="text-5xl md:text-6xl font-bold mb-8 animate-fade-in-up">
             Dê o primeiro passo na revolução financeira.
           </h2>
-          <Button 
-            variant="default" 
-            size="lg" 
-            className="text-xl px-12 py-8 bg-background text-foreground hover:bg-background/90 animate-glow-pulse font-bold"
-            asChild
-          >
+          <Button variant="default" size="lg" className="text-xl px-12 py-8 bg-background text-foreground hover:bg-background/90 animate-glow-pulse font-bold" asChild>
             <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
               Começar no WhatsApp
             </a>
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
