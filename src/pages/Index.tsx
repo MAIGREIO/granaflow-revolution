@@ -204,18 +204,24 @@ const Index = () => {
                       <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
                       <ul className="space-y-3">
                         {[
-                          "Sistema web com gráficos interativos",
-                          "Controle via WhatsApp (texto, áudio, imagem)",
-                          "Transações ilimitadas",
-                          "Categorias personalizadas",
-                          "Suporte via WhatsApp",
-                          "Até 3 contas bancárias",
-                          "Lembretes automáticos",
-                          "Exportação de dados"
+                          { text: "Sistema web com gráficos e relatórios financeiros", checked: true },
+                          { text: "Controle de gastos e ganhos direto pelo WhatsApp", checked: true },
+                          { text: "Transações ilimitadas por texto, áudio e imagem", checked: true },
+                          { text: "Criação de categorias e subcategorias personalizadas", checked: true },
+                          { text: "Lembretes automáticos de contas a pagar e receber", checked: true },
+                          { text: "Até 3 contas bancárias conectadas", checked: true },
+                          { text: "Suporte via WhatsApp", checked: true },
+                          { text: "Gestão compartilhada", checked: false },
+                          { text: "Exportação de dados", checked: false },
+                          { text: "Suporte por ligação", checked: false }
                         ].map((feature, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                            <span className="text-sm">{feature}</span>
+                            {feature.checked ? (
+                              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            ) : (
+                              <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                            )}
+                            <span className="text-sm">{feature.text}</span>
                           </li>
                         ))}
                       </ul>
@@ -241,22 +247,38 @@ const Index = () => {
                     <div className="space-y-3">
                       <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
                       <ul className="space-y-3">
-                        {[
-                          "Todos os recursos Premium",
-                          "Contas bancárias ilimitadas",
-                          "Gestão Compartilhada (famílias, casais)",
-                          "WhatsApp individual para cada membro",
-                          "Alertas personalizados por membro",
-                          "Visualização centralizada",
-                          "1 Usuário incluso sem custo",
-                          "Suporte humanizado",
-                          "Suporte por ligação"
-                        ].map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                            <span className="text-sm">{feature}</span>
-                          </li>
-                        ))}
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Todos os recursos do plano Basic</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Contas bancárias ilimitadas</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div className="text-sm">
+                            <div className="font-medium">Gestão Compartilhada — ideal para casais, famílias ou equipes</div>
+                            <ul className="mt-1 space-y-1 ml-4 text-muted-foreground">
+                              <li>• Cada membro usa seu próprio WhatsApp</li>
+                              <li>• Alertas automáticos de vencimentos para todos</li>
+                              <li>• Visualização centralizada e sincronizada</li>
+                              <li>• 1 usuário extra incluso sem custo</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Exportação de dados (CSV / Excel)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Suporte humanizado via WhatsApp</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Suporte por ligação</span>
+                        </li>
                       </ul>
                     </div>
                     <Button variant="hero" className="w-full" asChild>
@@ -289,18 +311,24 @@ const Index = () => {
                       <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
                       <ul className="space-y-3">
                         {[
-                          "Sistema web com gráficos interativos",
-                          "Controle via WhatsApp (texto, áudio, imagem)",
-                          "Transações ilimitadas",
-                          "Categorias personalizadas",
-                          "Suporte via WhatsApp",
-                          "Até 3 contas bancárias",
-                          "Lembretes automáticos",
-                          "Exportação de dados"
+                          { text: "Sistema web com gráficos e relatórios financeiros", checked: true },
+                          { text: "Controle de gastos e ganhos direto pelo WhatsApp", checked: true },
+                          { text: "Transações ilimitadas por texto, áudio e imagem", checked: true },
+                          { text: "Criação de categorias e subcategorias personalizadas", checked: true },
+                          { text: "Lembretes automáticos de contas a pagar e receber", checked: true },
+                          { text: "Até 3 contas bancárias conectadas", checked: true },
+                          { text: "Suporte via WhatsApp", checked: true },
+                          { text: "Gestão compartilhada", checked: false },
+                          { text: "Exportação de dados", checked: false },
+                          { text: "Suporte por ligação", checked: false }
                         ].map((feature, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                            <span className="text-sm">{feature}</span>
+                            {feature.checked ? (
+                              <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            ) : (
+                              <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                            )}
+                            <span className="text-sm">{feature.text}</span>
                           </li>
                         ))}
                       </ul>
@@ -329,22 +357,38 @@ const Index = () => {
                     <div className="space-y-3">
                       <p className="font-semibold text-sm uppercase tracking-wide">Recursos Incluídos</p>
                       <ul className="space-y-3">
-                        {[
-                          "Todos os recursos Premium",
-                          "Contas bancárias ilimitadas",
-                          "Gestão Compartilhada (famílias, casais)",
-                          "WhatsApp individual para cada membro",
-                          "Alertas personalizados por membro",
-                          "Visualização centralizada",
-                          "1 Usuário incluso sem custo",
-                          "Suporte humanizado",
-                          "Suporte por ligação"
-                        ].map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                            <span className="text-sm">{feature}</span>
-                          </li>
-                        ))}
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Todos os recursos do plano Basic</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Contas bancárias ilimitadas</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <div className="text-sm">
+                            <div className="font-medium">Gestão Compartilhada — ideal para casais, famílias ou equipes</div>
+                            <ul className="mt-1 space-y-1 ml-4 text-muted-foreground">
+                              <li>• Cada membro usa seu próprio WhatsApp</li>
+                              <li>• Alertas automáticos de vencimentos para todos</li>
+                              <li>• Visualização centralizada e sincronizada</li>
+                              <li>• 1 usuário extra incluso sem custo</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Exportação de dados (CSV / Excel)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Suporte humanizado via WhatsApp</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">Suporte por ligação</span>
+                        </li>
                       </ul>
                     </div>
                     <Button variant="hero" className="w-full" asChild>
