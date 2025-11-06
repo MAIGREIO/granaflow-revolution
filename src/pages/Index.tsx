@@ -86,14 +86,12 @@ const Index = () => {
       {/* Tecnologia */}
       <section id="features-section" className="py-24 bg-card/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            Tecnologia de ponta, sem complicação.
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Saiba para onde vai o seu dinheiro!</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <Card className="glass-card p-6 hover:border-primary transition-all duration-300 hover:scale-105">
               <Brain className="w-12 h-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">IA integrada com GPT-4</h3>
+              <h3 className="font-semibold mb-2">fr</h3>
               <p className="text-sm text-muted-foreground">Inteligência artificial avançada</p>
             </Card>
 
