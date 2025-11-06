@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MessageSquare, Settings, TrendingUp, Bell, Zap, Lock, BarChart, Brain, Database, FileSpreadsheet, Check } from "lucide-react";
+import { MessageSquare, Settings, TrendingUp, Bell, Zap, Lock, BarChart, Brain, Database, FileSpreadsheet, Check, X } from "lucide-react";
 import heroPhone from "@/assets/hero-phone.jpg";
 import Header from "@/components/Header";
 import Testimonials from "@/components/Testimonials";
@@ -299,7 +299,7 @@ const Index = () => {
                           "Exportação de dados"
                         ].map((feature, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
                             <span className="text-sm">{feature}</span>
                           </li>
                         ))}
