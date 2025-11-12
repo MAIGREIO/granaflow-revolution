@@ -1,4 +1,6 @@
 import deviceMockup from "@/assets/device-mockup.png";
+import mockupsDashboard from "@/assets/mockups-dashboard.png";
+
 const DeviceMockup = () => {
   return <section className="py-24 bg-card/50">
       <div className="container mx-auto px-4">
@@ -13,7 +15,11 @@ const DeviceMockup = () => {
         
         <div className="relative max-w-5xl mx-auto">
           <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full" />
-          
+          <img 
+            src={mockupsDashboard} 
+            alt="GranaFlow Dashboard e WhatsApp" 
+            className="relative z-10 w-full h-auto animate-fade-in"
+          />
         </div>
       </div>
     </section>;
