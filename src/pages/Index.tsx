@@ -39,7 +39,7 @@ const Index = () => {
             
             <div className="relative animate-float">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-              <img src={heroPhone} alt="GranaFlow WhatsApp interface" className="relative z-10 w-full max-w-md mx-auto rounded-3xl shadow-2xl" />
+              
             </div>
           </div>
         </div>
