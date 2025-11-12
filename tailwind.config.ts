@@ -46,6 +46,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          yellow: "hsl(var(--card-yellow))",
+          coral: "hsl(var(--card-coral))",
+          teal: "hsl(var(--card-teal))",
+          purple: "hsl(var(--card-purple))",
+          blue: "hsl(var(--card-blue))",
+          pink: "hsl(var(--card-pink))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -56,6 +62,20 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        spotify: {
+          green: "hsl(var(--spotify-green))",
+          "green-hover": "hsl(var(--spotify-green-hover))",
+        },
+        text: {
+          primary: "hsl(var(--text-primary))",
+          secondary: "hsl(var(--text-secondary))",
+          subdued: "hsl(var(--text-subdued))",
+        },
+        bg: {
+          elevated: "hsl(var(--bg-elevated))",
+          base: "hsl(var(--bg-base))",
+          highlight: "hsl(var(--bg-highlight))",
         },
       },
       borderRadius: {
@@ -80,12 +100,12 @@ export default {
             height: "0",
           },
         },
-        "glow-pulse": {
+        "spotify-pulse": {
           "0%, 100%": {
-            boxShadow: "0 0 20px hsl(180 100% 50% / 0.5)",
+            boxShadow: "0 0 15px hsl(141 73% 42% / 0.3)",
           },
           "50%": {
-            boxShadow: "0 0 30px hsl(180 100% 50% / 0.8)",
+            boxShadow: "0 0 25px hsl(141 73% 42% / 0.5)",
           },
         },
         "float": {
@@ -110,7 +130,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "spotify-pulse": "spotify-pulse 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out",
       },

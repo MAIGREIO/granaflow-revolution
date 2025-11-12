@@ -8,45 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 222 47% 5%;
+    /* Spotify-inspired dark theme */
+    --background: 0 0% 7%;
     --foreground: 0 0% 100%;
 
-    --card: 222 47% 8%;
+    --card: 0 0% 10%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 222 47% 8%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 180 100% 50%;
-    --primary-foreground: 222 47% 5%;
+    --primary: 141 73% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 264 60% 30%;
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 16% 65%;
-    --muted-foreground: 215 16% 80%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 180 100% 50%;
-    --accent-foreground: 222 47% 5%;
+    --accent: 141 73% 42%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 47% 15%;
-    --input: 222 47% 15%;
-    --ring: 180 100% 50%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 141 73% 42%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    --navy: 222 47% 5%;
-    --purple: 264 60% 30%;
-    --cyan: 180 100% 50%;
-    --gray-text: 215 16% 80%;
+    /* Spotify green accent */
+    --spotify-green: 141 73% 42%;
+    --spotify-green-hover: 141 73% 50%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 5%), hsl(264 60% 30%), hsl(180 100% 50%));
-    --gradient-cta: linear-gradient(90deg, hsl(180 100% 50%), hsl(264 60% 50%));
-    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5);
-    --glow-cyan-strong: 0 0 30px hsl(180 100% 50% / 0.8);
+    /* Card vibrant colors */
+    --card-yellow: 45 93% 58%;
+    --card-coral: 15 86% 65%;
+    --card-teal: 174 72% 56%;
+    --card-purple: 271 51% 60%;
+    --card-blue: 207 90% 54%;
+    --card-pink: 330 65% 60%;
+    
+    /* Text hierarchy */
+    --text-primary: 0 0% 100%;
+    --text-secondary: 0 0% 72%;
+    --text-subdued: 0 0% 64%;
+    
+    /* Backgrounds */
+    --bg-elevated: 0 0% 12%;
+    --bg-base: 0 0% 7%;
+    --bg-highlight: 0 0% 18%;
+    
+    /* Subtle effects */
+    --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --hover-overlay: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -57,7 +74,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   html {
@@ -66,25 +83,49 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .glow-cyan {
-    box-shadow: var(--glow-cyan);
+  /* Spotify-style cards */
+  .spotify-card {
+    @apply bg-card rounded-lg transition-all duration-200;
+    box-shadow: var(--shadow-card);
   }
   
-  .glow-cyan-strong {
-    box-shadow: var(--glow-cyan-strong);
+  .spotify-card:hover {
+    @apply bg-bg-highlight;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
   }
 
+  /* Glass effect for header */
   .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
+  /* Vibrant card colors */
+  .card-yellow { background: hsl(var(--card-yellow)); }
+  .card-coral { background: hsl(var(--card-coral)); }
+  .card-teal { background: hsl(var(--card-teal)); }
+  .card-purple { background: hsl(var(--card-purple)); }
+  .card-blue { background: hsl(var(--card-blue)); }
+  .card-pink { background: hsl(var(--card-pink)); }
+
+  /* Text utilities */
+  .text-primary { color: hsl(var(--text-primary)); }
+  .text-secondary { color: hsl(var(--text-secondary)); }
+  .text-subdued { color: hsl(var(--text-subdued)); }
+
+  /* Hover effects */
+  .hover-spotify {
+    transition: all 0.2s ease;
+  }
+  
+  .hover-spotify:hover {
+    background: var(--hover-overlay);
   }
 
-  .gradient-cta {
-    background: var(--gradient-cta);
-  }
+  /* Green accent utilities */
+  .text-spotify-green { color: hsl(var(--spotify-green)); }
+  .bg-spotify-green { background: hsl(var(--spotify-green)); }
+  .hover:bg-spotify-green-hover:hover { background: hsl(var(--spotify-green-hover)); }
 }
