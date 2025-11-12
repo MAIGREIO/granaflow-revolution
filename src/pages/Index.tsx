@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MessageSquare, Settings, TrendingUp, Bell, Zap, Lock, BarChart, Brain, Database, FileSpreadsheet, Check, X } from "lucide-react";
-import heroPhone from "@/assets/hero-phone.jpg";
+import heroPhone from "@/assets/mockups_moneyfy.png";
 import Header from "@/components/Header";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
