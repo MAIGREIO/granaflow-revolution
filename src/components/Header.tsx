@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 import { useState } from "react";
+import moneyfyLogo from "@/assets/moneyfy-logo.png";
 const Header = () => {
   const [language, setLanguage] = useState<"pt" | "en">("pt");
   const toggleLanguage = () => {
@@ -35,9 +36,7 @@ const Header = () => {
           top: 0,
           behavior: 'smooth'
         })}>
-            <div className="w-10 h-10 rounded-full bg-spotify-green/20 flex items-center justify-center">
-              <Zap className="w-6 h-6 text-spotify-green" />
-            </div>
+            <img src={moneyfyLogo} alt="Moneyfy Logo" className="w-10 h-10" />
             <span className="text-2xl font-bold">Moneyfy</span>
           </div>
 
