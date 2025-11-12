@@ -24,7 +24,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-5xl leading-tight md:text-8xl font-bold">
+              <h1 className="text-5xl leading-tight font-bold md:text-7xl">
                 A Revolução da Organização Financeira
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
