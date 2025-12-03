@@ -22,15 +22,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-5xl leading-tight font-bold md:text-7xl">
+          <div className="grid grid-cols-2 gap-6 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-8 animate-fade-in-up">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl leading-tight font-bold">
                 A Revolução da Organização Financeira
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground">
                 Controle seu dinheiro sem planilhas — direto no WhatsApp, com IA.
               </p>
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6 animate-glow-pulse" asChild>
+              <Button variant="hero" size="lg" className="text-xs sm:text-sm md:text-lg px-4 md:px-8 py-3 md:py-6 animate-glow-pulse" asChild>
                 <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
                   Começar no WhatsApp
                 </a>
@@ -39,7 +39,11 @@ const Index = () => {
             
             <div className="relative animate-float">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-              
+              <img 
+                src={heroPhone} 
+                alt="GranaFlow App Mockup" 
+                className="relative z-10 w-full h-auto"
+              />
             </div>
           </div>
         </div>
