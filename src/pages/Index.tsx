@@ -22,22 +22,22 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="flex flex-row items-center gap-4 md:gap-8 animate-fade-in-up flex-wrap">
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl leading-tight font-bold">
+          <div className="flex flex-col items-center justify-center text-center gap-8 md:gap-12">
+            <div className="flex flex-col items-center gap-6 md:gap-8 animate-fade-in-up max-w-4xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight font-bold">
                 A Revolução da Organização Financeira
               </h1>
-              <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl">
                 Controle seu dinheiro sem planilhas — direto no WhatsApp, com IA.
               </p>
-              <Button variant="hero" size="lg" className="text-xs sm:text-sm md:text-lg px-4 md:px-8 py-3 md:py-6 animate-glow-pulse whitespace-nowrap" asChild>
+              <Button variant="hero" size="lg" className="text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 animate-glow-pulse" asChild>
                 <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
                   Começar no WhatsApp
                 </a>
               </Button>
             </div>
             
-            <div className="relative animate-float">
+            <div className="relative animate-float max-w-2xl w-full">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
               <img 
                 src={heroPhone} 
