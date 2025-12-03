@@ -128,4 +128,34 @@ All colors MUST be HSL.
   .text-spotify-green { color: hsl(var(--spotify-green)); }
   .bg-spotify-green { background: hsl(var(--spotify-green)); }
   .hover:bg-spotify-green-hover:hover { background: hsl(var(--spotify-green-hover)); }
+
+  /* CTA Green Glow Effects */
+  .cta-glow {
+    @apply bg-primary text-primary-foreground font-bold rounded-xl;
+    box-shadow: 0 0 20px hsl(var(--spotify-green) / 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .cta-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--spotify-green) / 0.7), 
+                0 0 60px hsl(var(--spotify-green) / 0.4),
+                0 0 90px hsl(var(--spotify-green) / 0.2);
+    transform: scale(1.05);
+    background: hsl(var(--spotify-green-hover));
+  }
+
+  /* Pulsing glow animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--spotify-green) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 35px hsl(var(--spotify-green) / 0.6),
+                  0 0 50px hsl(var(--spotify-green) / 0.3);
+    }
+  }
+
+  .cta-pulse {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
 }
