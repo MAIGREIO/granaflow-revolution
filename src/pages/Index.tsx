@@ -23,14 +23,14 @@ const Index = () => {
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="grid grid-cols-2 gap-6 md:gap-12 items-center">
-            <div className="space-y-4 md:space-y-8 animate-fade-in-up">
+            <div className="flex flex-row items-center gap-4 md:gap-8 animate-fade-in-up flex-wrap">
               <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl leading-tight font-bold">
                 A Revolução da Organização Financeira
               </h1>
               <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground">
                 Controle seu dinheiro sem planilhas — direto no WhatsApp, com IA.
               </p>
-              <Button variant="hero" size="lg" className="text-xs sm:text-sm md:text-lg px-4 md:px-8 py-3 md:py-6 animate-glow-pulse" asChild>
+              <Button variant="hero" size="lg" className="text-xs sm:text-sm md:text-lg px-4 md:px-8 py-3 md:py-6 animate-glow-pulse whitespace-nowrap" asChild>
                 <a href="https://buy.stripe.com/test_cNi5kF8e90Cl2wR5IG2ZO00" target="_blank" rel="noopener noreferrer">
                   Começar no WhatsApp
                 </a>
